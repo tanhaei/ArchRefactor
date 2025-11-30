@@ -1,0 +1,1 @@
+openai>=1.0.0networkx>=3.1python-louvain>=0.16pandas>=2.0.0numpy>=1.24.0tqdm>=4.65.0matplotlib>=3.7.1
