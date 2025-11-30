@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
 /**
  * Implements Algorithm 1: Graph Extraction from the ArchRefactor paper.
  * Parses Java source code to AST and generates an Architectural JSON Abstraction.
