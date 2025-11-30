@@ -1,0 +1,28 @@
+[
+  {
+    "class": "com.monolith.core.OrderManager",
+    "analysis": {
+      "isSmell": true,
+      "confidence": 0.95,
+      "explanation": "The class violates the Single Responsibility Principle. It handles heterogeneous responsibilities including Persistence (directDbQuery), Security (validateUserToken), Presentation (renderInvoicePdf), and Notification (sendSmtpEmail). High LCOM (0.92) and CBO (42) confirm low cohesion and high coupling.",
+      "refactor": "Decompose into specialized services.",
+      "refactoring_strategies": [
+        {
+          "operation": "Extract Class 'OrderRepository'",
+          "rationale": "Moves direct database interactions (directDbQuery, java.sql.Connection) out of the manager to separate persistence logic.",
+          "steps": "1. Create OrderRepository interface. 2. Move SQL logic. 3. Inject Repository into OrderManager."
+        },
+        {
+          "operation": "Extract Class 'InvoiceRenderer'",
+          "rationale": "Decouples presentation logic (renderInvoicePdf) from business rules, allowing the PDF engine to change without affecting order processing.",
+          "steps": "1. Create InvoiceRenderer class. 2. Move PDF generation code. 3. Pass Order data object to renderer."
+        },
+        {
+          "operation": "Extract Service 'NotificationService'",
+          "rationale": "Isolates email/SMTP logic (sendSmtpEmail), making it easier to mock during testing and switch providers later.",
+          "steps": "1. Define NotificationService interface. 2. Implement EmailNotificationService. 3. Replace direct calls with service calls."
+        }
+      ]
+    }
+  }
+]

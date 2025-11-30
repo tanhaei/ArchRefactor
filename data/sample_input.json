@@ -1,0 +1,84 @@
+{
+  "project": "/home/user/projects/LegacyECommerce",
+  "generated_at": "2025-05-20T10:00:00Z",
+  "classes": [
+    {
+      "className": "com.monolith.core.OrderManager",
+      "isInterface": false,
+      "methods": [
+        {
+          "name": "createOrder",
+          "lines": 45,
+          "inferred_resp": "Business Logic"
+        },
+        {
+          "name": "validateUserToken",
+          "lines": 30,
+          "inferred_resp": "Security"
+        },
+        {
+          "name": "directDbQuery",
+          "lines": 120,
+          "inferred_resp": "Persistence"
+        },
+        {
+          "name": "sendSmtpEmail",
+          "lines": 55,
+          "inferred_resp": "Notification"
+        },
+        {
+          "name": "renderInvoicePdf",
+          "lines": 200,
+          "inferred_resp": "Presentation"
+        }
+      ],
+      "metrics": {
+        "methodCount": 128,
+        "fieldCount": 45,
+        "cbo": 42,
+        "lcom": 0.92
+      },
+      "dependencies": [
+        {
+          "type": "call",
+          "target": "java.sql.Connection"
+        },
+        {
+          "type": "call",
+          "target": "com.ext.StripeAPI"
+        },
+        {
+          "type": "call",
+          "target": "javax.mail.Transport"
+        },
+        {
+          "type": "inherit",
+          "target": "com.monolith.base.BaseController"
+        }
+      ]
+    },
+    {
+      "className": "com.monolith.core.OrderItem",
+      "isInterface": false,
+      "methods": [
+        {
+          "name": "getPrice",
+          "lines": 5,
+          "inferred_resp": "Business Logic"
+        },
+        {
+          "name": "setQuantity",
+          "lines": 5,
+          "inferred_resp": "Business Logic"
+        }
+      ],
+      "metrics": {
+        "methodCount": 8,
+        "fieldCount": 3,
+        "cbo": 2,
+        "lcom": 0.1
+      },
+      "dependencies": []
+    }
+  ]
+}
