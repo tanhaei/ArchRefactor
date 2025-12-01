@@ -4,7 +4,7 @@
 
 This repository contains the implementation of the approach described in the paper:
 
-**ArchRefactor: A Hybrid Framework for Automated Detection and Refactoring of Architectural Smells** \> *Mohammad Tanhaei* \> *Machine Learning with Applications, 2025*
+**ArchRefactor: A Hybrid Framework for Automated Detection and Refactoring of Architectural Smells** \> *Mohammad Tanhaei* \> *To Appear, 2025*
 
 ## **🚀 Features**
 
