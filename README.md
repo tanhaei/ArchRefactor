@@ -49,7 +49,7 @@ mvn clean package
 ### **2\. Install Python Dependencies**
 
 ```
-pip install \-r requirements.txt
+pip install -r requirements.txt
 ```
 
 ## **💻 Usage**
