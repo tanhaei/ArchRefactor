@@ -59,7 +59,7 @@ pip install \-r requirements.txt
 Run the Java tool to parse your project and generate the abstraction JSON.
 
 ```
-java \-jar target/ArchRefactor-1.0.jar \--input /path/to/target/project \--output data/abstraction.json
+java -jar target/ArchRefactor-1.0.jar --input /path/to/target/project --output data/abstraction.json
 ```
 
 ### **Step 2: Analyze with LLM**
@@ -67,8 +67,8 @@ java \-jar target/ArchRefactor-1.0.jar \--input /path/to/target/project \--outpu
 Set your API key and run the analyzer.
 
 ```
-export OPENAI\_API\_KEY='your-api-key-here'  
-python src/main/python/main.py \--input data/abstraction.json \--mode detection
+export OPENAI_API_KEY='your-api-key-here'  
+python src/main/python/main.py --input data/abstraction.json --mode detection
 ```
 
 ## **📝 Citation**
